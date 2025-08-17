@@ -121,3 +121,29 @@ const {isbn:Number}=b8
 console.log(Number)//1234
 const {authors:{firstname}}=b8
 console.log(firstname)
+
+// Self-study 17/8/2568
+// ทวน Object.keys() & Object.values() &  Object.entries()
+
+// Object.keys() คืนค่าเป็น array ของชื่อ key (property names) ของ object
+const book = { isbn: 123, title: "JS", author: "John" }
+console.log(Object.keys(book)) // [ 'isbn', 'title', 'author' ]
+
+// Object.values(obj) คืนค่าเป็น array ของ value (ค่าของ property) ของ object
+console.log(Object.values(book)) // [ 123, 'JS', 'John' ]
+
+// loop 
+const user = { id: 1, name: "Mena", role: "student" }
+// forEach แสดง key กับ value
+Object.keys(user).forEach(key => {
+  console.log(key, ":", user[key])
+})
+
+// Object.entries(obj) จะคืนค่าเป็น array ของ [key, value]
+console.log(Object.entries(user)) // [ [ 'id', 1 ], [ 'name', 'Mena' ], [ 'role', 'student' ] ]
+
+for (const [key, value] of Object.entries(user)) {
+  console.log(`${key} = ${value}`)
+}
+
+// 
