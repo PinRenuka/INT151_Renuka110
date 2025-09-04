@@ -1,3 +1,4 @@
+
 const studentScores = [
     { name : 'Alice', score : 85},
     { name : 'Bob', score : 92},
@@ -6,7 +7,6 @@ const studentScores = [
     { name : 'Eve', score : 78}
 ];
 
-// 110 อยากได้jellycat 
 function getPassingName(student){
     return student.filter((student) => student.score >= 70).map(student => student.name.toUpperCase())
 }
@@ -14,7 +14,7 @@ function getPassingName(student){
 const passingNames = getPassingName(studentScores);
 console.log(passingNames)
 
-
+// ------------------------------------------------------------------------------------------------------------------------
 //check array type
 console.log(Array.isArray([]))
 console.log(Array.isArray([1, true]))
